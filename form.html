@@ -6,26 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Digital</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .backgr {
+            background: url(images/bg-login-2.png) center center fixed;
+            background-size:cover;
+        }
+    
+    </style>
 </head>
 
-<body>
+<body class="backgr">
     <div class="container">
-        <footer id="footer">
+        <footer id="footer" >
             <div class="footer-legal">
                 <div class="row justify-content-between">
                     <div class="col">
-                        <div class="px-1 py-5">
+                        <div class="px-1 py-5" >
                             <h1 class="text-center text-warning">Atenção</h1>
-                            <div class="col-lg-6 mx-auto">
-                                <p align="justify" class="lead fw-bold mb-4 flex-wrap">Para acessar a Biblioteca
+                            <div class="col-lg-6 mx-auto" style="">
+                                <p align="justify" class="lead fw-bold mb-4 text-white flex-wrap">Para acessar a Biblioteca
                                     Digital, utilize o e-mail fornecido pela instituição
-                                    “.....@soubraseducacional.com.br”. Siga os critérios abaixo para efetuar o
-                                    acesso, preencha os campos abaixo com os seguintes dados:
+                                    “.....@soubraseducacional.com.br”. Siga os critérios abaixo para efetuar Login, preencha os campos com os seguintes dados:
                                 </p>
-                                <ul>
+                                <ul class="text-white">
                                     <li>E-mail Institucional;</li>
                                     <li>Primeiro Nome;</li>
-                                    <li>Sobrenomes;</li>
+                                    <li>Sobrenome;</li>
                                 </ul>
                             </div>
                         </div>
@@ -34,34 +40,53 @@
             </div>
         </footer>
         <div class="row justify-content-center align-items-center">
-            <div class="col-md-6">
-                <h2 class="text-center">Biblioteca Digital</h2>
-                <form>
+            <div class="col-md-6 text-white">
+                <img class="img-fluid d-block mx-auto w-25" src="images/BRAS-EDUCACIONAL.png" alt="">
+                
+                <p><p><?php if (isset($response)) { echo $response['message']; } ?></p></p>
+                <form method="post" class="text-white">
                     <div class="form-group">
                         <label for="email">Email Institucional</label>
-                        <input type="email" class="form-control" id="email"
-                            placeholder="....@soubraseducacional.com.br">
+                        <input class="form-control" type="email" name="email" placeholder="....@soubraseducacional.com.br" required>
                     </div>
                     <div class="form-group">
                         <label for="nome">Primeiro Nome</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Informe seu primeiro nome">
+                        <input class="form-control" type="text" name="firstName" placeholder="Informe seu primeiro nome" required>
                     </div>
                     <div class="form-group">
                         <label for="Sobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" id="Sobrenome" placeholder="Informe seu sobrenome">
+                        <input class="form-control" type="text" name="lastName" placeholder="Informe seu sobrenome" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                    <div class="form-button">
+                            <button id="submit" type="submit" class="btn btn-primary btn-block">Login</button>
+                        </div>
                 </form>
             </div>
 
         </div>
         <div class="col-lg-6 mx-auto px-1 py-5">
             <p align="justify" class="text-center fw-bold mb-4 flex-wrap">
-                <a class="text-dark"
+                <a class="text-white"
                     href="https://forms.office.com/Pages/ResponsePage.aspx?id=c7WxuaJqi06RORWP4ZiMf9KqzA_cHhBNvZSer-Db_w9UNjJETVVEMjQ2TFVISVpUUkQ3QTZESTk3Qi4u">Clique
                     aqui e Solicite sua inclusão na Biblioteca!</a>
             </p>
         </div>
+        <footer id="footer" >
+            <div class="footer-legal">
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <div class="" >
+                            <h1 class="text-center text-warning">Leia !!!</h1>
+                            <div class="col-lg-6 mx-auto" style="">
+                                <p align="justify" class="lead fw-bold mb-4 text-white flex-wrap">
+                                    Após fazer a solicitação de inclusão na Biblioteca Digital, os usuários solicitados serão disponibilizados em até 72 horas!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
